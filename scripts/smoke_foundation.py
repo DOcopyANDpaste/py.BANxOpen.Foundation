@@ -1,6 +1,6 @@
 """NX smoke test for BANxOpen Foundation. Read-only: the part is left exactly as it was.
 
-Run in NX 2412 with a part open (ideally one with bodies and BA_REQ requirements written by the C# bead tool):
+Run in NX 2606 with a part open (ideally one with bodies and BA_REQ requirements written by the C# bead tool):
     File > Execute > Journal (Alt+F8) > this file
 
 Checks, in the Listing Window:
@@ -10,8 +10,6 @@ Checks, in the Listing Window:
   4. BodyResolver resolves every body back from its BodyId
   5. The requirement store reads and audits a domain written by the C# tools (no refresh: nothing is written)
 """
-
-from __future__ import annotations
 
 import logging
 import os

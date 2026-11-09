@@ -1,16 +1,11 @@
 """The result every library operation returns for an expected outcome."""
 
-from __future__ import annotations
-
 from dataclasses import dataclass
-from typing import Any, Generic, TypeVar
-
-T = TypeVar("T")
-V = TypeVar("V")
+from typing import Any
 
 
 @dataclass(frozen=True, slots=True)
-class OperationResult(Generic[T]):
+class OperationResult[T]:
     """Outcome of an operation a caller must show to a user.
 
     `value` is meaningful only when `ok` is true. `message` is user-facing wording from the producing library's
@@ -30,7 +25,7 @@ class OperationResult(Generic[T]):
     question: str | None = None
 
     @staticmethod
-    def success(value: V = None, message: str | None = None) -> OperationResult[V]:
+    def success[V](value: V = None, message: str | None = None) -> OperationResult[V]:
         return OperationResult(True, value, None, message)
 
     @staticmethod

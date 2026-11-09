@@ -1,7 +1,5 @@
 """The wording of every message the Foundation libraries can put in front of a user."""
 
-from __future__ import annotations
-
 from collections.abc import Iterable
 from typing import ClassVar
 

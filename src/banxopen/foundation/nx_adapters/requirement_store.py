@@ -16,8 +16,6 @@ API checked against the NX 2412 Python stubs (`NXOpen.Validate`).
 # pyright: reportAttributeAccessIssue=false, reportArgumentType=false, reportReturnType=false
 # pyright: reportCallIssue=false, reportGeneralTypeIssues=false
 
-from __future__ import annotations
-
 import logging
 from collections.abc import Iterable, Sequence
 from dataclasses import dataclass
@@ -326,7 +324,7 @@ class NxPartRequirementStore:
                 if self._context.is_alive(tag):
                     obj = NXOpen.TaggedObjectManager.GetTaggedObject(tag)
                     found = obj if isinstance(obj, NXOpen.NXObject) else None
-            except (ValueError, NXOpen.NXException):
+            except ValueError, NXOpen.NXException:
                 found = None
 
             if found is None:

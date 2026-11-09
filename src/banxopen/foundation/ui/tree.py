@@ -5,11 +5,9 @@
 # pyright: reportAttributeAccessIssue=false, reportArgumentType=false, reportReturnType=false
 # pyright: reportCallIssue=false, reportGeneralTypeIssues=false
 
-from __future__ import annotations
-
 import logging
 from collections.abc import Callable, Sequence
-from typing import Final, Generic, TypeVar
+from typing import Final
 
 import NXOpen
 import NXOpen.BlockStyler
@@ -17,7 +15,6 @@ import NXOpen.BlockStyler
 from banxopen.foundation.nx_adapters.errors import nx_error_detail
 from banxopen.foundation.ui.tree_rows import MenuItem, TreeRow
 
-T = TypeVar("T")
 _log = logging.getLogger(__name__)
 
 WARNING_COLOR: Final = 36
@@ -29,7 +26,7 @@ class TreeUnavailableError(Exception):
     page is not built, or NX recreated the dialog's controls). Recoverable: rebuild once the control is back."""
 
 
-class TreeBinding(Generic[T]):
+class TreeBinding[T]:
     """Every tree goes through one of these, so the rebuild idiom and the node-to-value lookup exist once. A selection
     is never turned back into a value by parsing what the tree displays: it is mapped through what was last shown.
 

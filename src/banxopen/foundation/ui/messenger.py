@@ -1,15 +1,11 @@
 """How presenters talk to the user, as a seam tests can fake. Pure: no NXOpen."""
 
-from __future__ import annotations
-
 from collections.abc import Callable
-from typing import Any, Protocol, TypeVar
+from typing import Any, Protocol
 
 from banxopen.foundation.codes import FoundationCodes
 from banxopen.foundation.model.results import OperationResult
 from banxopen.foundation.text import FoundationText
-
-T = TypeVar("T")
 
 
 class Messenger(Protocol):
@@ -22,7 +18,7 @@ class Messenger(Protocol):
         ...
 
 
-def run_with_confirmation(
+def run_with_confirmation[T](
     messenger: Messenger,
     operation: Callable[[bool], OperationResult[T]],
     text: FoundationText | None = None,

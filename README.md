@@ -1,6 +1,6 @@
 # BANxOpen.Foundation (Python)
 
-The shared base every BANxOpen NX tool builds on: result and rule shapes, body identity, part requirements, NX session plumbing, and the Block UI kit. It is the Python port of the C# `BANxOpen.Foundation` (NX 2412, embedded CPython 3.11). Domain-neutral: no materials or sheet metal.
+The shared base every BANxOpen NX tool builds on: result and rule shapes, body identity, part requirements, NX session plumbing, and the Block UI kit. It is the Python port of the C# `BANxOpen.Foundation` for NX 2606 (Designcenter), whose embedded Python is CPython 3.15. Domain-neutral: no materials or sheet metal.
 
 ## Public API
 
@@ -31,8 +31,8 @@ Logging uses the C# environment variables: `BANXOPEN_LOG_TARGET` = `NxLog` | `Li
 ## Development
 
 ```powershell
-uv venv --python 3.11
-uv pip install -e ".[dev]"
+python -m venv .venv                       # with Python 3.15: the version NX 2606 embeds (the template's .venv works)
+.venv\Scripts\python -m pip install -e ".[dev]"
 New-Item -ItemType Junction -Path .\typings -Target "$env:UGII_BASE_DIR\UGOPEN\pythonStubs"   # NXOpen stubs for pyright/Pylance
 
 .venv\Scripts\ruff check . ; .venv\Scripts\ruff format --check .
@@ -41,7 +41,7 @@ New-Item -ItemType Junction -Path .\typings -Target "$env:UGII_BASE_DIR\UGOPEN\p
 .venv\Scripts\python -m pytest --cov        # runs without NX
 ```
 
-NX 2412's Python stubs have defects: instance methods declared without `self`, enum members typed as `int`, and collections without `__iter__`. Each NX-touching module turns off only the pyright rules those defects trip, with a comment at the top of the file.
+NX's Python stubs have defects (found in NX 2412's; recheck them against NX 2606's): instance methods declared without `self`, enum members typed as `int`, and collections without `__iter__`. Each NX-touching module turns off only the pyright rules those defects trip, with a comment at the top of the file.
 
 ## In NX
 

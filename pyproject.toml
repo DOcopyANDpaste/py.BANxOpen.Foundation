@@ -2,7 +2,7 @@
 name = "banxopen-foundation"
 description = "BANxOpen Foundation: shared data model, rule-engine shape, part requirements, NX plumbing and the UI kit."
 dynamic = ["version"]
-requires-python = "==3.11.*"          # must match NX 2412's embedded Python
+requires-python = "==3.15.*"          # must match NX 2606's embedded Python
 dependencies = []
 
 [project.optional-dependencies]
@@ -19,7 +19,7 @@ path = "src/banxopen/foundation/__init__.py"
 packages = ["src/banxopen"]
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py315"
 line-length = 120               # the team's C# column width
 src = ["src", "tests"]
 
@@ -40,7 +40,7 @@ known-local-folder = ["builders"]
 exclude = ["**/*_generated.py"]
 
 [tool.pyright]
-pythonVersion = "3.11"
+pythonVersion = "3.15"
 typeCheckingMode = "standard"
 include = ["src", "tests"]
 venvPath = "."

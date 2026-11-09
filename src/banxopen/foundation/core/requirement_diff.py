@@ -1,7 +1,5 @@
 """What a refresh has to do to turn the requirements a part holds into the ones a domain wants."""
 
-from __future__ import annotations
-
 from collections.abc import Sequence
 from dataclasses import dataclass
 

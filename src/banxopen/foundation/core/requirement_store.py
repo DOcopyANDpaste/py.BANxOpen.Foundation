@@ -1,7 +1,5 @@
 """The port a domain uses to read and write its requirements in the work part."""
 
-from __future__ import annotations
-
 from collections.abc import Sequence
 from typing import Protocol
 

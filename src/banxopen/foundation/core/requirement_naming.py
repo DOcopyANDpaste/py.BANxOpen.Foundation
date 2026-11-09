@@ -9,8 +9,6 @@ other.
 Internal to Foundation: not part of the public API.
 """
 
-from __future__ import annotations
-
 from collections.abc import Sequence
 from urllib.parse import quote, unquote
 

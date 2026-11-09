@@ -1,13 +1,9 @@
 """What a tool puts in a Block UI tree or its context menu, as plain values. Pure: presenters build these and tests
 read them; `TreeBinding` and `show_menu` write them to NX."""
 
-from __future__ import annotations
-
 from collections.abc import Mapping
 from dataclasses import dataclass, field
-from typing import Final, Generic, TypeVar
-
-T = TypeVar("T")
+from typing import Final
 
 UNCHECKED: Final = 1
 """`TreeRow.state` for NX's built-in unchecked state icon. NX 2412's tree has no checkbox edit control, so a checkbox
@@ -16,7 +12,7 @@ CHECKED: Final = 2
 
 
 @dataclass(frozen=True, slots=True)
-class TreeRow(Generic[T]):
+class TreeRow[T]:
     """One node. `value` is what a click on it resolves to: None for a structural row (a category, say) the user can
     see but not act on. `columns` maps column id to text, for the columns after the node's own text (column 0)."""
 

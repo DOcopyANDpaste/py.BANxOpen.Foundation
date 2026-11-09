@@ -2,6 +2,11 @@
 
 All notable changes to the public API (`banxopen.foundation`, `banxopen.foundation.nx`, `banxopen.foundation.ui`). Versioning is semantic, measured on the public API.
 
+## [Unreleased]
+
+### Changed
+- **Breaking:** targets NX 2606 (Designcenter) and its embedded CPython 3.15. `requires-python` is now `==3.15.*` (was `==3.11.*`), and the code uses 3.12+ syntax (type-parameter generics such as `class OperationResult[T]`), so it no longer runs on NX 2412's Python 3.11.
+
 ## [1.1.0] - 2026-10-28
 
 ### Added

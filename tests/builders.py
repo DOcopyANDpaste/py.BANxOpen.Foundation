@@ -1,7 +1,5 @@
 """Test-data builders shared across the suite (ports of the C# `RequirementNamingTests.Spec` helper)."""
 
-from __future__ import annotations
-
 from collections.abc import Sequence
 
 from banxopen.foundation import (

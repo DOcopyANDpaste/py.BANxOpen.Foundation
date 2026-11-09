@@ -1,7 +1,5 @@
 """The shape every gate rule's verdict takes."""
 
-from __future__ import annotations
-
 from collections.abc import Mapping
 from dataclasses import dataclass, field
 from enum import Enum

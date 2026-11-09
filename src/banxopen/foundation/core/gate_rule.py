@@ -1,14 +1,9 @@
 """The gate-rule seam every rule pipeline is built from."""
 
-from __future__ import annotations
-
-from typing import Protocol, TypeVar
-
-C_contra = TypeVar("C_contra", contravariant=True)
-O_co = TypeVar("O_co", covariant=True)
+from typing import Protocol
 
 
-class GateRule(Protocol[C_contra, O_co]):
+class GateRule[C, O](Protocol):
     """Decides whether an action is allowed, blocked, or needs user confirmation.
 
     Implement this to add a business rule without touching the planner or any other rule. A plain class with
@@ -23,4 +18,4 @@ class GateRule(Protocol[C_contra, O_co]):
         """Evaluation order, ascending. Leave gaps (100, 200, ...) so new rules can be inserted without renumbering."""
         ...
 
-    def evaluate(self, context: C_contra, /) -> O_co: ...
+    def evaluate(self, context: C, /) -> O: ...

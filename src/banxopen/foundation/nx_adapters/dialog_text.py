@@ -1,7 +1,5 @@
 """Wording every NX dialog built on Foundation shows the same way, with no domain meaning."""
 
-from __future__ import annotations
-
 from typing import TYPE_CHECKING, ClassVar
 
 from banxopen.foundation.nx_adapters.errors import nx_error_detail

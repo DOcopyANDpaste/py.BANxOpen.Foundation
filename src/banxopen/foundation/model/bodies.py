@@ -1,7 +1,5 @@
 """Bodies as read off the live model into a form Core-layer code can hold."""
 
-from __future__ import annotations
-
 from collections.abc import Mapping
 from dataclasses import dataclass
 from enum import Enum

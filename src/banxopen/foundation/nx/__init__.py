@@ -4,8 +4,6 @@ Importable without NX: every name is resolved lazily on first use, so tests and 
 Using the names (other than the logging settings) needs a running NX session.
 """
 
-from __future__ import annotations
-
 import importlib
 from typing import TYPE_CHECKING, Any
 

@@ -1,7 +1,5 @@
 """Developer loop helpers. No-ops unless BANXOPEN_DEV=1."""
 
-from __future__ import annotations
-
 import importlib
 import os
 import sys
