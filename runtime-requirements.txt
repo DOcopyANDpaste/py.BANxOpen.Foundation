@@ -1,0 +1,2 @@
+# Third-party packages Foundation needs at NX runtime (installed into the shared site-packages).
+# None: Foundation uses the standard library only.

@@ -1,0 +1,26 @@
+"""The gate-rule seam every rule pipeline is built from."""
+
+from __future__ import annotations
+
+from typing import Protocol, TypeVar
+
+C_contra = TypeVar("C_contra", contravariant=True)
+O_co = TypeVar("O_co", covariant=True)
+
+
+class GateRule(Protocol[C_contra, O_co]):
+    """Decides whether an action is allowed, blocked, or needs user confirmation.
+
+    Implement this to add a business rule without touching the planner or any other rule. A plain class with
+    `rule_id` and `order` attributes and an `evaluate` method satisfies it.
+    """
+
+    @property
+    def rule_id(self) -> str: ...
+
+    @property
+    def order(self) -> int:
+        """Evaluation order, ascending. Leave gaps (100, 200, ...) so new rules can be inserted without renumbering."""
+        ...
+
+    def evaluate(self, context: C_contra, /) -> O_co: ...
