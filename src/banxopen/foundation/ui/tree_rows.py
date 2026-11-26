@@ -1,6 +1,8 @@
 """What a tool puts in a Block UI tree or its context menu, as plain values. Pure: presenters build these and tests
 read them; `TreeBinding` and `show_menu` write them to NX."""
 
+from __future__ import annotations
+
 from collections.abc import Mapping
 from dataclasses import dataclass, field
 from typing import Final

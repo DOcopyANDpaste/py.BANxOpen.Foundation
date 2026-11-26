@@ -5,6 +5,8 @@
 # pyright: reportAttributeAccessIssue=false, reportArgumentType=false, reportReturnType=false
 # pyright: reportCallIssue=false, reportGeneralTypeIssues=false
 
+from __future__ import annotations
+
 from collections.abc import Iterator
 from contextlib import contextmanager
 from typing import TYPE_CHECKING

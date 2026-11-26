@@ -11,6 +11,8 @@ Checks, in the Listing Window:
   5. The requirement store reads and audits a domain written by the C# tools (no refresh: nothing is written)
 """
 
+from __future__ import annotations
+
 import logging
 import os
 import sys

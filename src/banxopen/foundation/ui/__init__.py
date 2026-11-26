@@ -5,6 +5,8 @@ directly. The NX-backed names are resolved lazily, so
 presenter tests can import this package without NX.
 """
 
+from __future__ import annotations
+
 import importlib
 from typing import TYPE_CHECKING, Any
 

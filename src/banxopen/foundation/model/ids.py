@@ -1,5 +1,7 @@
 """Identifiers Core-layer code can hold without NXOpen."""
 
+from __future__ import annotations
+
 from dataclasses import dataclass
 
 

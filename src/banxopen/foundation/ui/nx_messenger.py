@@ -5,6 +5,8 @@
 # pyright: reportAttributeAccessIssue=false, reportArgumentType=false, reportReturnType=false
 # pyright: reportCallIssue=false, reportGeneralTypeIssues=false
 
+from __future__ import annotations
+
 from typing import Any
 
 import NXOpen

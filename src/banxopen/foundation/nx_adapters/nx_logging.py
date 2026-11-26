@@ -15,6 +15,8 @@ Debug lines always go to the syslog, and to the Listing Window only when debug i
 # pyright: reportAttributeAccessIssue=false, reportArgumentType=false, reportReturnType=false
 # pyright: reportCallIssue=false, reportGeneralTypeIssues=false
 
+from __future__ import annotations
+
 import logging
 import os
 import re

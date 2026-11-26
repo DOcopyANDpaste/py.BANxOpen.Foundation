@@ -1,6 +1,8 @@
 """Pins Foundation's public API. A failure here means the API changed: update the pin deliberately, bump the version
 and add a CHANGELOG entry, then run every downstream repo's tests."""
 
+from __future__ import annotations
+
 import importlib
 import inspect
 

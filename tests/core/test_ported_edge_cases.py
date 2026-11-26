@@ -1,5 +1,7 @@
 """Behaviour the C# code had but its tests did not pin; pinned here so the port stays faithful."""
 
+from __future__ import annotations
+
 from dataclasses import replace
 
 import pytest

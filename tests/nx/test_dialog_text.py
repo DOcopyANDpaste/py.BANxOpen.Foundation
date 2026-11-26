@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 from banxopen.foundation.nx import NxDialogText, nx_error_code, nx_error_detail
 
 

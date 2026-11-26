@@ -3,6 +3,8 @@
 NX operations are in `banxopen.foundation.nx`; the Block UI kit is in `banxopen.foundation.ui`.
 """
 
+from __future__ import annotations
+
 from banxopen.foundation.codes import FoundationCodes
 from banxopen.foundation.core.gate_rule import GateRule
 from banxopen.foundation.core.requirement_diff import RequirementDiff

@@ -1,5 +1,7 @@
 """The gate-rule seam every rule pipeline is built from."""
 
+from __future__ import annotations
+
 from typing import Protocol
 
 

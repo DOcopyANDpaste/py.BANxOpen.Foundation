@@ -1,5 +1,7 @@
 """Requirements a feature domain holds in a part as native NX Requirements."""
 
+from __future__ import annotations
+
 from dataclasses import dataclass
 from enum import Enum
 

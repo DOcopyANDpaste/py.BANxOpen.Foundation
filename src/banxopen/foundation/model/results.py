@@ -1,5 +1,7 @@
 """The result every library operation returns for an expected outcome."""
 
+from __future__ import annotations
+
 from dataclasses import dataclass
 from typing import Any
 

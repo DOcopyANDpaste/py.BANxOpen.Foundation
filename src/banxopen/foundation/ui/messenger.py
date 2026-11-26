@@ -1,5 +1,7 @@
 """How presenters talk to the user, as a seam tests can fake. Pure: no NXOpen."""
 
+from __future__ import annotations
+
 from collections.abc import Callable
 from typing import Any, Protocol
 

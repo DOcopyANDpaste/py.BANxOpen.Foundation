@@ -1,6 +1,6 @@
 # BANxOpen.Foundation (Python)
 
-The shared base every BANxOpen NX tool builds on: result and rule shapes, body identity, part requirements, NX session plumbing, and the Block UI kit. It is the Python port of the C# `BANxOpen.Foundation` for NX 2606 (Designcenter), whose embedded Python is CPython 3.15. Domain-neutral: no materials or sheet metal.
+The shared base every BANxOpen NX tool builds on: result and rule shapes, body identity, part requirements, NX session plumbing, and the Block UI kit. It is the Python port of the C# `BANxOpen.Foundation` for NX 2606 (Designcenter), whose embedded Python is CPython 3.12. Domain-neutral: no materials or sheet metal.
 
 ## Public API
 
@@ -31,7 +31,7 @@ Logging uses the C# environment variables: `BANXOPEN_LOG_TARGET` = `NxLog` | `Li
 ## Development
 
 ```powershell
-python -m venv .venv                       # with Python 3.15: the version NX 2606 embeds (the template's .venv works)
+python -m venv .venv                       # with Python 3.12: the version NX 2606 embeds (the template's .venv works)
 .venv\Scripts\python -m pip install -e ".[dev]"
 New-Item -ItemType Junction -Path .\typings -Target "$env:UGII_BASE_DIR\UGOPEN\pythonStubs"   # NXOpen stubs for pyright/Pylance
 
